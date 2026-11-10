@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wood-fired kitchen, menu, reservations & delivery | Ember Restaurant</title>
+<meta name="description" content="Wood-fired North Indian and Pakistani cooking. Browse the menu, book a table or order delivery.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="hero" id="top">
+  <div class="hero-img" aria-hidden="true"></div>
+  <div class="top">
+    <a class="logo" href="index.html" aria-label="Ember Restaurant home"><svg class="flame" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 2c2 12 16 18 16 36a16 16 0 0 1-32 0c0-8 4-12 7-16 1 5 3 7 5 8-2-12 0-20 4-28Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 62c-6 0-10-4-10-10 0-6 5-9 7-14 1 4 3 5 4 5 2-3 3-6 3-9 4 4 6 9 6 17 0 6-4 11-10 11Z" fill="currentColor" opacity=".85"/></svg><span><b>EMBER</b><small>RESTAURANT</small></span></a>
+    <div class="right">
+      <nav id="nav" aria-label="Main"><a href="index.html" class=on aria-current=page>Home</a><a href="menu.html">Menu</a><a href="reserve.html">Reserve</a><a href="visit.html">Visit</a></nav>
+      <button class="pill" id="openCart">Order <svg class="ico" viewBox="0 0 32 24" aria-hidden="true"><circle cx="6" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 18h8l3-10h5M14 8h4M8 14l4-8h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="count" id="cartCount">0</span></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="hero-copy"><p class="status" id="status" aria-live="polite">Checking hours…</p>
+    <h1>Cooked over wood.<br>Served while it’s still <em>loud.</em></h1>
+    <hr class="rule">
+    <p class="lede">Clay-oven breads, slow karahis and charcoal grills from a kitchen that never turns the fire off. Eat in, or get it at your door in about 35 minutes.</p>
+    <div class="cta"><a class="btn gold" href="menu.html"><svg class="ico" viewBox="0 0 32 24" aria-hidden="true"><circle cx="6" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 18h8l3-10h5M14 8h4M8 14l4-8h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Order delivery</a><a class="btn line" href="reserve.html"><svg class="ico" viewBox="0 0 32 28" aria-hidden="true"><path d="M2 8h28M6 8v18M26 8v18M4 14h24M11 8V3M16 8V3M21 8V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Book a table</a></div></div>
+</header>
+<main id="main">
+<div class="fire"><p><i></i>Today’s fire:<i></i></p><div><svg class="flame" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 2c2 12 16 18 16 36a16 16 0 0 1-32 0c0-8 4-12 7-16 1 5 3 7 5 8-2-12 0-20 4-28Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 62c-6 0-10-4-10-10 0-6 5-9 7-14 1 4 3 5 4 5 2-3 3-6 3-9 4 4 6 9 6 17 0 6-4 11-10 11Z" fill="currentColor" opacity=".85"/></svg><b id="special">Chicken Tikka</b><svg class="flame" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 2c2 12 16 18 16 36a16 16 0 0 1-32 0c0-8 4-12 7-16 1 5 3 7 5 8-2-12 0-20 4-28Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 62c-6 0-10-4-10-10 0-6 5-9 7-14 1 4 3 5 4 5 2-3 3-6 3-9 4 4 6 9 6 17 0 6-4 11-10 11Z" fill="currentColor" opacity=".85"/></svg></div></div>
+<section class="picks"><div class="sec-head"><h2>House favourites</h2><p>Most ordered this month. Tap <b>+</b> to add to your delivery order.</p></div>
+  <ul class="items" id="picks"></ul>
+  <p class="more"><a class="btn line" href="menu.html">See the full menu</a></p></section>
+<section class="split">
+  <img src="images/hero.jpg" alt="Flames in the clay oven beside a basket of fresh naan and charcoal kebabs" loading="lazy">
+  <div><h2>One fire. Everything on it.</h2><hr class="rule">
+  <p>Our oven is lit before the first guest arrives and stays lit until the last plate leaves. Breads go in against the clay wall, kebabs sit over charcoal, and the karahis are cooked in the wok one order at a time.</p>
+  <p>The spices are ground in house each week. Nothing is held under a lamp, so what reaches your table or your door is made for you.</p></div>
+</section>
+<section class="tiles" aria-label="Where to next">
+  <a class="tile" href="menu.html" style="--img:url(images/lamb-biryani.jpg)"><b>Order delivery</b><span>Browse the menu and have it at your door in about 35 minutes.</span></a>
+  <a class="tile" href="reserve.html" style="--img:url(images/lamb-nihari.jpg)"><b>Book a table</b><span>Pick a date and time. We hold your table for 15 minutes.</span></a>
+  <a class="tile" href="visit.html" style="--img:url(images/hero.jpg)"><b>Visit us</b><span>Find the address, opening hours and how to reach us.</span></a>
+</section>
+</main>
+<footer>
+  <div class="foot-grid">
+    <div><a class="logo" href="index.html"><svg class="flame" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 2c2 12 16 18 16 36a16 16 0 0 1-32 0c0-8 4-12 7-16 1 5 3 7 5 8-2-12 0-20 4-28Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 62c-6 0-10-4-10-10 0-6 5-9 7-14 1 4 3 5 4 5 2-3 3-6 3-9 4 4 6 9 6 17 0 6-4 11-10 11Z" fill="currentColor" opacity=".85"/></svg><span><b>EMBER</b><small>RESTAURANT</small></span></a><p>Wood-fired cooking, open every day from 12 pm.</p></div>
+    <div><h4>Go to</h4><a href="index.html" class=on aria-current=page>Home</a><a href="menu.html">Menu</a><a href="reserve.html">Reserve</a><a href="visit.html">Visit</a></div>
+    <div><h4>Find us</h4><p>24 Fire Lane, Saddar<br>Rawalpindi</p><p><a href="tel:+920000000000">+92 000 000 0000</a></p></div>
+  </div>
+  <p class="copy">© <span id="yr"></span> Ember Restaurant. Sample project for demonstration.</p>
+</footer>
+<aside class="cart" id="cart" aria-label="Your order">
+  <div class="cart-head"><h3>Your order</h3><button class="x" id="closeCart" aria-label="Close order">✕</button></div>
+  <ul id="cartList"></ul>
+  <dl class="totals">
+    <div><dt>Subtotal</dt><dd id="sub">$0.00</dd></div>
+    <div><dt>Delivery</dt><dd id="fee">Free</dd></div>
+    <div class="grand"><dt>Total</dt><dd id="total">$0.00</dd></div>
+  </dl>
+  <p class="hint" id="hint"></p>
+  <label class="field">Delivery address<input id="addr" autocomplete="street-address" placeholder="House, street, area"></label>
+  <button class="btn gold full" id="checkout">Place order</button>
+</aside>
+<div class="scrim" id="scrim"></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>

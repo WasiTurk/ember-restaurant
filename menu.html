@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu | Ember Restaurant</title>
+<meta name="description" content="Starters, mains, breads, rice and sweets from the wood-fired kitchen at Ember Restaurant.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="hero small" id="top">
+  <div class="hero-img" aria-hidden="true"></div>
+  <div class="top">
+    <a class="logo" href="index.html" aria-label="Ember Restaurant home"><svg class="flame" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 2c2 12 16 18 16 36a16 16 0 0 1-32 0c0-8 4-12 7-16 1 5 3 7 5 8-2-12 0-20 4-28Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 62c-6 0-10-4-10-10 0-6 5-9 7-14 1 4 3 5 4 5 2-3 3-6 3-9 4 4 6 9 6 17 0 6-4 11-10 11Z" fill="currentColor" opacity=".85"/></svg><span><b>EMBER</b><small>RESTAURANT</small></span></a>
+    <div class="right">
+      <nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="menu.html" class=on aria-current=page>Menu</a><a href="reserve.html">Reserve</a><a href="visit.html">Visit</a></nav>
+      <button class="pill" id="openCart">Order <svg class="ico" viewBox="0 0 32 24" aria-hidden="true"><circle cx="6" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 18h8l3-10h5M14 8h4M8 14l4-8h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="count" id="cartCount">0</span></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="hero-copy"><h1>Our menu</h1><hr class="rule"><p class="lede">Starters to sweets, all cooked to order. Add dishes to your order and we deliver.</p></div>
+</header>
+<main id="main">
+<section class="menu"><div class="sec-head"><h2>The menu</h2><p>Tap <b>+</b> to add to your delivery order. <span>Spice levels run 1 (mild) to 3 (hot).</span></p></div>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <ul class="items" id="items"></ul></section>
+</main>
+<footer>
+  <div class="foot-grid">
+    <div><a class="logo" href="index.html"><svg class="flame" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 2c2 12 16 18 16 36a16 16 0 0 1-32 0c0-8 4-12 7-16 1 5 3 7 5 8-2-12 0-20 4-28Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 62c-6 0-10-4-10-10 0-6 5-9 7-14 1 4 3 5 4 5 2-3 3-6 3-9 4 4 6 9 6 17 0 6-4 11-10 11Z" fill="currentColor" opacity=".85"/></svg><span><b>EMBER</b><small>RESTAURANT</small></span></a><p>Wood-fired cooking, open every day from 12 pm.</p></div>
+    <div><h4>Go to</h4><a href="index.html">Home</a><a href="menu.html" class=on aria-current=page>Menu</a><a href="reserve.html">Reserve</a><a href="visit.html">Visit</a></div>
+    <div><h4>Find us</h4><p>24 Fire Lane, Saddar<br>Rawalpindi</p><p><a href="tel:+920000000000">+92 000 000 0000</a></p></div>
+  </div>
+  <p class="copy">© <span id="yr"></span> Ember Restaurant. Sample project for demonstration.</p>
+</footer>
+<aside class="cart" id="cart" aria-label="Your order">
+  <div class="cart-head"><h3>Your order</h3><button class="x" id="closeCart" aria-label="Close order">✕</button></div>
+  <ul id="cartList"></ul>
+  <dl class="totals">
+    <div><dt>Subtotal</dt><dd id="sub">$0.00</dd></div>
+    <div><dt>Delivery</dt><dd id="fee">Free</dd></div>
+    <div class="grand"><dt>Total</dt><dd id="total">$0.00</dd></div>
+  </dl>
+  <p class="hint" id="hint"></p>
+  <label class="field">Delivery address<input id="addr" autocomplete="street-address" placeholder="House, street, area"></label>
+  <button class="btn gold full" id="checkout">Place order</button>
+</aside>
+<div class="scrim" id="scrim"></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
